@@ -39,7 +39,7 @@ pipeline {
          stage('Build Docker image'){
              steps {
                 // Build docker image
-                sh 'mvn package -Pdocker'
+                sh 'mvn package -Pdocker -Dmaven.test.skip=true'
              }
          }
          
